@@ -54,6 +54,10 @@ namespace Resources.API.Services
                 await _context.SaveChangesAsync();
             }
         }
+        public void DeletePointOfInterest(PointOfInterest pointOfInterest)
+        {
+            _context.PointsOfInterest.Remove(pointOfInterest);
+        }
 
         public async Task<bool> SaveChangesAsync()
         {
