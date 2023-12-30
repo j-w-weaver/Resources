@@ -165,7 +165,7 @@ namespace Resources.API.Controllers
             _cityInfoRepository.DeletePointOfInterest(pointOfInterestEntity);
             await _cityInfoRepository.SaveChangesAsync();
 
-            _mailService.Send("DELETION!",
+            _mailService.Send("Resource has been deleted!",
                 $"{pointOfInterestEntity} has been deleted.");
 
             return NoContent();
